@@ -11,15 +11,17 @@ def getKeyboardButtonPressed():
         "left_right": 0,
         "rotateLeft_right": 0,
         "launch": 0,
-        "land": 0
+        "land": 0,
+        "picture": 0
     }
-
+    if dc.getKey('p'):
+        controls["picture"] = 1
     if dc.getKey('q'):
         controls["launch"] = 1
     if dc.getKey('e'):
         controls["land"] = 1
     if dc.getKey('UP'):
-        controls["up_down"] = 40
+        controls["up_down"] = 100
     if dc.getKey('DOWN'):
         controls["up_down"] = -40
     if dc.getKey('w'):
