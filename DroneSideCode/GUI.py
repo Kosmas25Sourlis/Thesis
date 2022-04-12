@@ -7,8 +7,11 @@ root = Tk()
 width ,height = 900,600
 root.minsize(width,height)
 
-frm = ttk.Frame(root, padding=200)
+root.configure(bg='#7F7876')
+frm = ttk.Frame(root, padding=10)
 frm.grid()
+
+
 ttk.Label(frm, text="Hello World!").grid(column=0, row=0)
 ttk.Button(frm, text="Quit", command=root.destroy).grid(column=1, row=0)
 
