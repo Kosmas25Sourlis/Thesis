@@ -34,8 +34,9 @@ CREATE TABLE IF NOT EXISTS `crimes`.`People` (
   `Phone` VARCHAR(15) NOT NULL,
   `Height` VARCHAR(10) NOT NULL,
   `Weight` VARCHAR(80) NOT NULL,
-  `Age` VARCHAR(80) NOT NULL,
-  `Sex` VARCHAR(80) NOT NULL,
+  `Age` VARCHAR(15) NOT NULL,
+  `Sex` VARCHAR(10) NOT NULL,
+  `Nationality` VARCHAR(10) NOT NULL,
   `PhotoURL` VARCHAR(80) NOT NULL,
   `Years_in_jail` VARCHAR(30),
   `AddressID` INT NOT NULL,
@@ -111,19 +112,19 @@ INSERT INTO `crimes`.`People_addresses`(`AddressID`,`Country`, `Town`, `ZipCode`
 INSERT INTO `crimes`.`People_addresses`(`AddressID`,`Country`, `Town`, `ZipCode`, `Street`,`Type` )VALUES ( 11,'Greece' , 'Kalamata','Uknown','Uknown', '-');
 INSERT INTO `crimes`.`People_addresses`(`AddressID`,`Country`, `Town`, `ZipCode`, `Street`,`Type` )VALUES ( 12,'Greece' , 'Komothnh','Uknown','Uknown', '-');
 
-INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`, `PhotoURL`,`Years_in_jail`, `AddressID`  )VALUES ( 1,'Sourlis' , 'Kosmas', '-', '1.93','100kg', '24','male' , 'Recources\Images\Kosmas_sourlis.jpg' , '0',1);
-INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`, `PhotoURL`,`Years_in_jail`, `AddressID`  )VALUES ( 2,'Sourlis' , 'Athanasios', '-', '1.93','80kg', '24','male' , 'Recources\Images\Athanasios_sourlis.jpg', '0',2);
-INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`, `PhotoURL`,`Years_in_jail`, `AddressID`  )VALUES ( 3,'Fragkedakis' , 'Dhmhtrhs', '-', '1.91','78kg', '22','male' , 'Recources\Images\Dhmhtrhs_Fragkedakis.jpg', '0',3);
-INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`, `PhotoURL`,`Years_in_jail`, `AddressID`  )VALUES ( 4,'Izdra' , 'Elina', '-', '1.70','55kg', '26','female' , 'Recources\Images\Elina_Izdra.jpg','0', 4);
-INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`, `PhotoURL`,`Years_in_jail`, `AddressID`  )VALUES ( 5,'Lazaros' , 'Kapoukranidis', '-', '1.85','82kg', '25','male' , 'Recources\Images\Lazaros_Kapoukranidis.jpg', '0',5);
-INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`, `PhotoURL`,`Years_in_jail`, `AddressID`  )VALUES ( 6,'Doe' , 'John', '-', '1.78','80kg', '24','female' , '-', '0', 6);
-INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`, `PhotoURL`,`Years_in_jail`, `AddressID`  )VALUES ( 7,'John' , 'Smith', '-', '1.63','90kg', '29','male' , '-', '0', 7);
-INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`, `PhotoURL`,`Years_in_jail`, `AddressID`  )VALUES ( 8,'Jones' , 'Sarah', '-', '1.61','60kg', '60','female' , '-', '0',8);
-INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`, `PhotoURL`,`Years_in_jail`, `AddressID`  )VALUES ( 9,'Papadopoulos' , 'Giwrgos', '-', '1.98','102kg', '52','male' , '-', '0',9);
-INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`, `PhotoURL`,`Years_in_jail`, `AddressID`  )VALUES ( 10,'Karragiannis' , 'Ioannis', '-', '1.63','60kg', '38','male' , '-', '0', 10);
+INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`,`Nationality`, `PhotoURL`,`Years_in_jail`, `AddressID`)VALUES ( 1,'Sourlis' , 'Kosmas', '-', '1.93','100kg', '24','male','Greek' , 'Recources\\Images\\Kosmas_Sourlis.jpg' , '0',1);
+INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`,`Nationality`, `PhotoURL`,`Years_in_jail`, `AddressID`)VALUES( 2,'Sourlis' , 'Athanasios', '-', '1.93','80kg', '24','male','Greek', 'Recources\\Images\\Athanasios_Sourlis.jpg', '0',2);
+INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`,`Nationality`, `PhotoURL`,`Years_in_jail`, `AddressID`)VALUES ( 3,'Fragkedakis' , 'Dhmhtrhs', '-', '1.91','78kg', '22','male' ,'Greek', 'Recources\\Images\\Dhmhtrhs_Fragkedakis.jpg', '0',3);
+INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`,`Nationality`, `PhotoURL`,`Years_in_jail`, `AddressID`)VALUES ( 4,'Izdra' , 'Elina', '-', '1.70','55kg', '26','female' ,'Greek', 'Recources\\Images\\Elina_Izdra.jpg','0', 4);
+INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`,`Nationality`, `PhotoURL`,`Years_in_jail`, `AddressID`)VALUES ( 5,'Lazaros' , 'Kapoukranidis', '-', '1.85','82kg', '25','male' ,'Greek', 'Recources\\Images\\Lazaros_Kapoukranidis.jpg', '0',5);
+INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`,`Nationality`, `PhotoURL`,`Years_in_jail`, `AddressID`)VALUES ( 6,'Doe' , 'John', '-', '1.78','80kg', '24','female' ,'Greek', '-', '0', 6);
+INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`,`Nationality`, `PhotoURL`,`Years_in_jail`, `AddressID`)VALUES ( 7,'John' , 'Smith', '-', '1.63','90kg', '29','male' ,'Greek', '-', '0', 7);
+INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`,`Nationality`, `PhotoURL`,`Years_in_jail`, `AddressID`)VALUES ( 8,'Jones' , 'Sarah', '-', '1.61','60kg', '60','female' ,'Greek', '-', '0',8);
+INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`,`Nationality`, `PhotoURL`,`Years_in_jail`, `AddressID`)VALUES ( 9,'Papadopoulos' , 'Giwrgos', '-', '1.98','102kg', '52','male' ,'Greek', '-', '0',9);
+INSERT INTO `crimes`.`People`(`Person_ID`,`Surname`, `First_name`, `Phone`, `Height`,`Weight`, `Age`,`Sex`,`Nationality`, `PhotoURL`,`Years_in_jail`, `AddressID`)VALUES( 10,'Karragiannis' , 'Ioannis', '-', '1.63','60kg', '38','male' ,'Greek', '-', '0', 10);
 
 INSERT INTO `crimes`.`Crime_records`(`CrimeID`, `Crime_description`, `Area_ID`, `Date_and_time`, `Additional info`)VALUES (1 ,'Bank robbery', 1, '2011-03-10 01:10:00', '-');
-INSERT INTO `crimes`.`Crime_records`(`CrimeID`, `Crime_description`, `Area_ID`, `Date_and_time`, `Additional info`)VALUES  (2,'Physical assault and hospitalized victims', 2,'20120-03-10 03:44:05', '-');
+INSERT INTO `crimes`.`Crime_records`(`CrimeID`, `Crime_description`, `Area_ID`, `Date_and_time`, `Additional info`)VALUES  (2,'Physical assault and hospitalized victims', 2,'2012-03-10 03:44:05', '-');
 INSERT INTO `crimes`.`Crime_records`(`CrimeID`, `Crime_description`, `Area_ID`, `Date_and_time`, `Additional info`)VALUES  (3,'Gun shot on hospitalized victims', 3,'2017-09-10 01:50:00', '-');
 INSERT INTO `crimes`.`Crime_records`(`CrimeID`, `Crime_description`, `Area_ID`, `Date_and_time`, `Additional info`)VALUES  (4,'Street theft, stole bag and purse', 4,'2022-01-25 16:30:00', '-');
 INSERT INTO `crimes`.`Crime_records`(`CrimeID`, `Crime_description`, `Area_ID`, `Date_and_time`, `Additional info`)VALUES (5,'Physically asaulted professor', 5,'2016-07-25 18:05:45', '-');

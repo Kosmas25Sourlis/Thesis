@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from PIL import Image, ImageTk
 from PIL import ImageTk
-
+import DatabaseRequests as dr
 def PopUpWindow(criminalData):
 
     root = Tk()
@@ -89,4 +89,7 @@ x={
     "crimes": "name",
     "victims": "name"
 }
+
+criminalslURL = dr.GetPhotoURLsFromRemainingAreas(2)
+print(criminalslURL)
 PopUpWindow(x)
