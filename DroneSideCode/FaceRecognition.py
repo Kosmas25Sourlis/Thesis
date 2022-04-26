@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+
 def LocateFace(img):
     faceCascade = cv2.CascadeClassifier('haarcascade_fronatlface_default.xml')
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)

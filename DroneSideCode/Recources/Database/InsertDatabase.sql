@@ -14,9 +14,7 @@ CREATE TABLE IF NOT EXISTS `crimes`.`Crime_area` (
   PRIMARY KEY (`Area_ID`),
   CONSTRAINT `FKAreaID`
   FOREIGN KEY (`Zone_ID`)
-  REFERENCES `crimes`.`Zones` (`Zone_ID`)
-  );
-
+  REFERENCES `crimes`.`Zones` (`Zone_ID`));
 
 CREATE TABLE IF NOT EXISTS `crimes`.`People_addresses` (
 `AddressID` INT NOT NULL AUTO_INCREMENT,

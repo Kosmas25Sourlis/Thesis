@@ -4,7 +4,7 @@ def ConnectTodatabase():
   con = mysql.connector.connect(host="localhost", user="root",password="", database="crimes")
   return con
 
-def GetCrimeAreaIDsInZone(zone_id , con , nearest):
+def GetCrimeAreaIDsInZone(zone_id, con, nearest):
 
   cursor = con.cursor()
   crimes_in_area_query = ""

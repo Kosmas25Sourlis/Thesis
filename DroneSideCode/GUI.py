@@ -3,6 +3,7 @@ from tkinter import ttk
 from PIL import Image, ImageTk
 from PIL import ImageTk
 import DatabaseRequests as dr
+
 def PopUpWindow(criminalData):
 
     root = Tk()
