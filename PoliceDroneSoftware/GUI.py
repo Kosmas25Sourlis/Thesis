@@ -1,10 +1,9 @@
 from tkinter import *
 from tkinter import ttk
 from PIL import Image, ImageTk
-from PIL import ImageTk
 import DatabaseRequests as dr
 
-def PopUpWindow(criminalData):
+def PopUpWindow(criminalData, id_criminal, photo_url):
 
     root = Tk()
     width, height = 1000,800
@@ -19,13 +18,15 @@ def PopUpWindow(criminalData):
     frm.grid()
 
 
-    ttk.Label(frm, text="Hello World!").grid(column=0, row=0)
-    ttk.Button(frm, text="Quit", command=root.destroy).grid(column=1, row=0)
 
-    image1 = Image.open("Recources/Images\photo.jpg")
+
+    image1 = Image.open("Recources\Images\photo.jpg")
     image1 = image1.resize((300,350))
     test = ImageTk.PhotoImage(image1)
-    database_photo = ttk.Label(image=test)
+    image2 = Image.open("Recources\Images\Kosmas_Sourlis.jpg")
+    image2 = image2.resize((300, 350))
+    test2 = ImageTk.PhotoImage(image2)
+    database_photo = ttk.Label(image=test2)
     drone_photo = ttk.Label(image=test)
 
     title = ttk.Label(text="Criminal Detected",font='Calibri 28 bold')
@@ -43,7 +44,7 @@ def PopUpWindow(criminalData):
     zip_code_criminal = ttk.Label(text="Zip code: " + criminalData["zip_code_criminal"], font='Calibri 12  bold')
     street_criminal_address = ttk.Label(text="Street: " + criminalData["street_criminal_address"], font='Calibri 12  bold')
     type_of_residence_criminal = ttk.Label(text="Type of residence: " + criminalData["type_of_criminal_residence"], font='Calibri 12  bold')
-    crimes = ttk.Label(text="Crimes: ", font='Calibri 16  bold')
+    crimes = ttk.Label(text="Crimes: " +  criminalData["crimes"], font='Calibri 16  bold')
     victims = ttk.Label(text="Victims: ", font='Calibri 16  bold')
     label_database = ttk.Label(text="Database photo",font='Calibri 18  bold')
     label_drone = ttk.Label(text="Drone photo",font='Calibri 18  bold')
@@ -73,24 +74,24 @@ def PopUpWindow(criminalData):
     root.mainloop()
 
 x={
-    "name_criminal": " name",
-    "surname_criminal": " name",
-    "age_criminal": " name",
-    "height_criminal": " name",
-    "weight_criminal": " name",
+    "name_criminal": " Kosmas",
+    "surname_criminal": " Sourlis",
+    "age_criminal": " 25",
+    "height_criminal": " 1.93",
+    "weight_criminal": " 100",
     "phone_criminal": " name",
-    "criminal_gender": " name",
-    "nationality_criminal": " name",
-    "years_in_jail": " name",
-    "country_residence_criminal": " name",
-    "town_criminal_address": " name",
-    "zip_code_criminal": " name",
-    "street_criminal_address": " name",
-    "type_of_criminal_residence": " name",
-    "crimes": "name",
-    "victims": "name"
+    "criminal_gender": " Male",
+    "nationality_criminal": " Greek",
+    "years_in_jail": " 0",
+    "country_residence_criminal": " Greece",
+    "town_criminal_address": " Thessaloniki",
+    "zip_code_criminal": " 58810",
+    "street_criminal_address": " Ermou 20",
+    "type_of_criminal_residence": " Permanent",
+    "crimes": " Bank robbery, Aristotelous Thessaloniki",
+    "victims": "-"
 }
 
 criminalslURL = dr.GetPhotoURLsFromArea(2)
 print(criminalslURL[0][0])
-PopUpWindow(x)
+PopUpWindow(x,2,2)

@@ -4,7 +4,7 @@ import KeyboardControl as dc
 
 dc.initializeWindow()
 
-def getKeyboardButtonPressed():
+def GetKeyboardButtonPressed():
     controls = {
         "up_down": 0,
         "forward_backwards": 0,

@@ -2,13 +2,9 @@ import cv2
 import numpy as np
 from PIL import Image
 import os
-# Path for face image database
-
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 face_detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml");
-paths = ['./user_1_crop_images','./user_2_crop_images','./user_4_crop_images']
-photos = os.listdir('./user_1_crop_images')
-
+paths = ['./user_1_crop_images','./user_2_crop_images','./user_4_crop_images','./user_4_crop_images']
 faceSamples = []
 ids = []
 for path in paths:
@@ -28,9 +24,8 @@ for path in paths:
             print()
             ids.append(int(id))
 
-
 recognizer.train( faceSamples, np.array(ids))
-# Save the model into trainer/trainer.yml
+# Save the model into trainer/zone1.yml
 recognizer.write('trained_model/trainer.yml')
 # Print the numer of faces trained and end program
 print("\n [INFO] {0} faces trained. Exiting Program".format(len(np.unique(ids))))
